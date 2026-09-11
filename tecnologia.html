@@ -1,26 +1,258 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Descripción para mejora de SEO -->
+  <meta name="description" content="Descubre cómo la tecnología, conectividad, computación e innovación transforman nuestro mundo en TechNova.">
   <title>Tecnología | TechNova</title>
+  
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Preconectar/Precargar tipografías (Opcional para mejorar rendimiento si usas Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar container nav-page">
-    <a class="logo" href="index.html">Tech<span>Nova</span></a>
-    <a class="back" href="index.html">← Página principal</a>
-  </nav>
+
+  <!-- Encabezado con semántica <header> -->
+  <header class="header">
+    <nav class="navbar container nav-page" aria-label="Navegación principal">
+      <a class="logo" href="index.html" aria-label="TechNova Inicio">Tech<span>Nova</span></a>
+      <a class="back-link" href="index.html">
+        <span aria-hidden="true">&larr;</span> Página principal
+      </a>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
   <main class="container page">
-    <p class="eyebrow">SECCIÓN 01</p>
-    <h1>Tecnología</h1>
-    <p class="lead">La tecnología forma parte de prácticamente todos los aspectos de la vida moderna.</p>
-    <div class="feature-grid">
-      <article class="feature"><span>01</span><h2>Conectividad</h2><p>Internet y las redes móviles permiten comunicarnos y compartir información desde casi cualquier lugar.</p></article>
-      <article class="feature"><span>02</span><h2>Computación</h2><p>Procesadores, almacenamiento y sistemas operativos hacen posible desde un teléfono hasta un centro de datos.</p></article>
-      <article class="feature"><span>03</span><h2>Innovación</h2><p>La combinación de hardware y software impulsa nuevas soluciones para educación, industria, salud y entretenimiento.</p></article>
+    <!-- Usamos un <header> interno dentro de main para agrupar el título y el subtítulo -->
+    <header class="page-header">
+      <span class="eyebrow">SECCIÓN 01</span>
+      <h1>Tecnología</h1>
+      <p class="lead">La tecnología forma parte de prácticamente todos los aspectos de la vida moderna.</p>
+    </header>
+
+    <!-- Sección de tarjetas con etiqueta <section> en lugar de un <div> genérico -->
+    <section class="feature-grid" aria-label="Áreas de la tecnología">
+      
+      <article class="feature-card">
+        <span class="card-number" aria-hidden="true">01</span>
+        <div class="card-content">
+          <h2>Conectividad</h2>
+          <p>Internet y las redes móviles permiten comunicarnos y compartir información desde casi cualquier lugar.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <span class="card-number" aria-hidden="true">02</span>
+        <div class="card-content">
+          <h2>Computación</h2>
+          <p>Procesadores, almacenamiento y sistemas operativos hacen posible desde un teléfono hasta un centro de datos.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <span class="card-number" aria-hidden="true">03</span>
+        <div class="card-content">
+          <h2>Innovación</h2>
+          <p>La combinación de hardware y software impulsa nuevas soluciones para educación, industria, salud y entretenimiento.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Botón de retorno destacado -->
+    <div class="actions">
+      <a class="btn btn-secondary" href="index.html">
+        <span aria-hidden="true">&larr;</span> Regresar al inicio
+      </a>
     </div>
-    <a class="btn" href="index.html">← Regresar al inicio</a>
   </main>
+
+  <!-- Pie de página genérico para dar mejor cierre estructural -->
+  <footer class="footer container">
+    <p>&copy; 2026 TechNova. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
+
+<style> 
+/* Variables y Configuración Global */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --radius: 12px;
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header & Navegación */
+.header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+/* Sección Principal */
+.page {
+  padding: 3rem 1.5rem;
+}
+
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.card-number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  background-color: rgba(37, 99, 235, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.feature-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Botones y Acciones */
+.actions {
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-main);
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+</style>
