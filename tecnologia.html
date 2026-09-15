@@ -4,11 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Descripción para mejora de SEO -->
-  <meta name="description" content="Descubre cómo la tecnología, conectividad, computación e innovación transforman nuestro mundo en TechNova.">
-  <title>Tecnología | TechNova</title>
-  
-  <!-- Estilos CSS -->
+  <title>Inteligencia Artificial | TechNova</title>
   <link rel="stylesheet" href="css/styles.css">
   
   <!-- Preconectar/Precargar tipografías (Opcional para mejorar rendimiento si usas Google Fonts) -->
@@ -17,61 +13,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar container nav-page">
+    <a class="logo" href="index.html">Tech<span>Nova</span></a>
+    <a class="back" href="index.html">← Página principal</a>
+  </nav>
 
-  <!-- Encabezado con semántica <header> -->
-  <header class="header">
-    <nav class="navbar container nav-page" aria-label="Navegación principal">
-      <a class="logo" href="index.html" aria-label="TechNova Inicio">Tech<span>Nova</span></a>
-      <a class="back-link" href="index.html">
-        <span aria-hidden="true">&larr;</span> Página principal
-      </a>
-    </nav>
-  </header>
-
-  <!-- Contenido Principal -->
   <main class="container page">
-    <!-- Usamos un <header> interno dentro de main para agrupar el título y el subtítulo -->
-    <header class="page-header">
-      <span class="eyebrow">SECCIÓN 01</span>
-      <h1>Tecnología</h1>
-      <p class="lead">La tecnología forma parte de prácticamente todos los aspectos de la vida moderna.</p>
-    </header>
+    <p class="eyebrow">SECCIÓN 01</p>
 
-    <!-- Sección de tarjetas con etiqueta <section> en lugar de un <div> genérico -->
-    <section class="feature-grid" aria-label="Áreas de la tecnología">
-      
-      <article class="feature-card">
-        <span class="card-number" aria-hidden="true">01</span>
-        <div class="card-content">
-          <h2>Conectividad</h2>
-          <p>Internet y las redes móviles permiten comunicarnos y compartir información desde casi cualquier lugar.</p>
-        </div>
+    <h1>Inteligencia Artificial</h1>
+
+    <p class="lead">
+      La inteligencia artificial permite que las máquinas aprendan, analicen información
+      y realicen tareas que normalmente requieren inteligencia humana.
+    </p>
+
+    <div class="feature-grid">
+
+      <article class="feature">
+        <span>01</span>
+        <h2>Aprendizaje</h2>
+        <p>
+          Los sistemas de IA pueden aprender a partir de grandes cantidades de datos
+          para reconocer patrones y mejorar sus resultados.
+        </p>
       </article>
 
-      <article class="feature-card">
-        <span class="card-number" aria-hidden="true">02</span>
-        <div class="card-content">
-          <h2>Computación</h2>
-          <p>Procesadores, almacenamiento y sistemas operativos hacen posible desde un teléfono hasta un centro de datos.</p>
-        </div>
+      <article class="feature">
+        <span>02</span>
+        <h2>Automatización</h2>
+        <p>
+          La IA permite automatizar tareas repetitivas, analizar información y apoyar
+          la toma de decisiones en empresas y diferentes industrias.
+        </p>
       </article>
 
-      <article class="feature-card">
-        <span class="card-number" aria-hidden="true">03</span>
-        <div class="card-content">
-          <h2>Innovación</h2>
-          <p>La combinación de hardware y software impulsa nuevas soluciones para educación, industria, salud y entretenimiento.</p>
-        </div>
+      <article class="feature">
+        <span>03</span>
+        <h2>Innovación</h2>
+        <p>
+          La inteligencia artificial impulsa nuevas aplicaciones en educación,
+          programación, salud, industria, entretenimiento y comunicación.
+        </p>
       </article>
 
-    </section>
-
-    <!-- Botón de retorno destacado -->
-    <div class="actions">
-      <a class="btn btn-secondary" href="index.html">
-        <span aria-hidden="true">&larr;</span> Regresar al inicio
-      </a>
     </div>
+
+    <a class="btn" href="index.html">← Regresar al inicio</a>
   </main>
 
   <!-- Pie de página genérico para dar mejor cierre estructural -->
